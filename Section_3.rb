@@ -1,4 +1,4 @@
-#========================================================Metodo Puts
+#========================================================Puts Method 
 puts "First test of Ruby"
 puts "Hello"
 
@@ -43,7 +43,7 @@ p 12.0 / 5 #con punto se realiza división decimal
 p 2 * 2 * 2 * 2
 p 2 ** 4 #para realizar potencia se utiliza doble (**)
 puts
-#==========================================
+#==========================================Coments
 
 =begin
   puts "Prueba de comentarios"
@@ -86,7 +86,7 @@ NAME = "Anndony"
 asd=90
 puts "My name is #{asd}"
 puts
-#=====================================Object methods
+#===================================== Object methods
 #Cuenta cantidad de caracteres (.length)
 p "Hello World".length
 cont = "Hello World"
@@ -117,7 +117,7 @@ p "I am #{age} years old"
 p "The result od adding 1 + 1 is #{1+1}"
 p "My name is #{name+" "+last_name}, I am "+ age.to_s + " years old." #imprimir cademas con numeros combirtiendo la edad a string
 
-#=========================================in terminal
+#=========================================In terminal
 =begin
   name = gets.chomp
   Anndony
