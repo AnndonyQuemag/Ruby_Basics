@@ -152,4 +152,47 @@ puts "Hello word".upcase
 #para intercambiar mayusculas y minusculas utilizamos swapcase
 puts "HelLo WoRd".swapcase
 puts
-#reverse method on a String
+#======================================================reverse method on a String
+#para Inprimir una cadena invertida se utiliza el metodo inverse
+puts "Ruby".reverse
+#se puede imprimir cadenas con varios metodos juntos asi
+puts "Ruby is fun".upcase.reverse
+puts
+#======================================================Bang methods on String
+#si queremos modificar una variable que contiene una cadena podemos utilizar el simbolo de exclamacion (!) la cual realiza una operacion y almacena o sobreescribe en el objeto
+word = "hello word"
+
+p word
+p word.capitalize #cambia la primera letra a mayuscula pero es solo temporal la variable sigue siendo igual
+
+#word = word.capitalize # asignanacion a la variable word de el contenido de la misma modificada con capitalize
+
+#p word
+#para realizar esto de forma mas sencilla
+word.capitalize!
+p word
+#de igual forma se puede realizar con otros metodos como upcase, downcase, reverse,swapcase
+word.downcase!
+p word
+word.upcase!
+p word
+puts
+#======================================================The include?
+#para encontrar un cadena en otra cadena se puede utilizar el metodo include?("Lo que se busca")
+word="Hello world"
+p word.include?("wor")
+p word.include?("h")#sin importar cuantas veces encuentre el caracter o palabra va a retornar true si hay alguna coincidencia deferenciando de mayusculas y minusculas y espacios
+#si queremos ignorar mayusculas de minusculas tendriamos que convertirlas
+p word.downcase.include?("h")
+puts
+#========================================================The empty? and mil? methods on String
+#para medir si una cadena esta vacía podemos utilizar empty?
+puts "".empty?
+puts "hello".empty?
+#para saber cuando una cadema es nula usamos nil?
+puts "Test nil".nil?
+puts "".nil?#cuando una cadena esta vacia no esta nula
+name="Anndony"
+last_name=name[20, 8]
+puts last_name
+puts last_name.nil?
