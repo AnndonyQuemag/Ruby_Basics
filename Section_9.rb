@@ -1,7 +1,7 @@
-#si se desea consultar informacion de algun comando se puede realizarlo por medio de la terminal del sistema poniendo "ri" seguido de el comando que se dea consultar ejemplo: ri String, ejemplo 2: ri String.upcase
+#If you want to consult information about any command, you can do it through the system terminal by putting "ri" followed by the command to be consulted, example: ri String, example 2: ri String.upcase
 #==========================================================Reviw of blocks
-#Los bloques se pueden generar con la palabra times seguida de dos llaves o las palabras do, end
-#para generar un contador dentro del ciclo se hace al inicio con barras verticales, incia siempre en cero
+#The blocks can be generated with the word times followed by two braces or the words do, end
+#to generate a counter within the cycle it is done at the beginning with vertical bars, always starts at zero
 3.times { |num| puts "Hello there, the number is #{num}"}
 puts
 
@@ -12,7 +12,7 @@ end
 puts
 
 #=====================================================The each method
-#este metodo realiza iteraciones en una matriz para recorrerla con each seguido de llaves o de do, end, al igual que el metodo anterior se genera una variable entre barras verticales que seran los elementos de la matriz
+#This method performs iterations in an array to go through it with each followed by braces or do, end, like the previous method, a variable is generated between vertical bars that will be the elements of the array
 
 candies = ["sour patch", "Milky way", "Airheads"]
 
@@ -27,7 +27,7 @@ names = ["bo", "moe", "joe"]
 names.each { |name| puts name.upcase }
 puts
 
-#funciona de igual forma para cada tipo de matriz, (string,number, ...)
+#works the same for each type of array, (string, number, ...)
 number = [1, 2, 3, 4, 5, 6]
 
 number.each do |num|
@@ -35,12 +35,12 @@ number.each do |num|
   puts "The square of #{num} is #{square}"
 end
 
-#las variables que se crean dentro de cada ciclo son variables locales asiq ue si se intenta immprimir estas tendremos un error ya que la variable fuera del ciclo en realidad no existe
+#the variables that are created within each cycle are local variables so if we try to print these we will have an error since the variable outside the cycle does not actually exist
 #puts square
 puts
 
 #====================================================More practice with the each method
-#se puee utilizar metodos para las iteraciones de cada matriz
+#you can use methods for iterations of each array
 fives = [5, 10 ,15, 20, 25, 30, 35, 40]
 evens = []
 odds = []
@@ -52,7 +52,7 @@ fives.each do |number|
 end
 puts
 
-#Recordar que con el operador ternario se puede realizar esta comparacion en menos lineas de codigo, ademas each tambien funciona con las llaves
+#Remember that with the ternary operator this comparison can be made in fewer lines of code, in addition each also works with the keys
 fives.each { |number| number.even? ? evens << number : odds << number }
 
 p evens
@@ -60,7 +60,7 @@ p odds
 puts
 
 #===============================================================each within each
-#se puede anidar metodos si se desea crear una variedad de posibilidades entre dos matrices
+#you can nest methods if you want to create a variety of possibilities between two arrays
 
 shirts = ["striped", "plain white", "plaid", "band"]
 ties = ["polka dot", "solid color", "boring"]
@@ -73,10 +73,10 @@ end
 puts
 
 #=============================================================the for loop
-#existe otra manera de recorrer una matriz y es con el metodo for
+#There is another way to go through an array and it is with the for method
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 15, 20, 40]
 
-for num in numbers # la variable que se crea para recorrer el array a diferencia de el metodo anterior es una variable global
+for num in numbers # the variable that is created to traverse the array unlike the previous method is a global variable
   puts num
 end
 puts
@@ -85,7 +85,7 @@ puts num
 puts
 
 #==============================================================the each_with_index method
-#con el metodo each_with_index, podemos saber que iteracion o en que posicion del indice de la matriz se encuentra, este se debe poner dentro de las barras invertidas despues de la variable, esto se puede realizar para todo tipo de matriz (String, Number, ...)
+#With the each_with_index method, we can know what iteration or in which position of the index of the matrix it is, this must be put inside the backslashes after the variable, this can be done for all types of matrix (String, Number,. ..)
 colors = ["Red", "Blue", "Green", "Yellow"]
 
 colors.each_with_index do |color, index|
@@ -95,7 +95,7 @@ end
 puts
 
 #==============================================================CHALLENGER the each_with_index method
-#ejercicio 1
+#Exercise 1
 numbers = [1, 2, 3, 4, 5]
 num = 0
 
@@ -108,7 +108,7 @@ puts
 puts "Sum is: #{num}"
 puts
 
-#ejercicio 2
+#Exercise 2
 arr = [-1, 2, 1, 2, 5, 7, 3]
 
 def print_if(array)
@@ -124,19 +124,19 @@ print_if(arr)
 puts
 
 #==========================================================The map or collect method
-#los metodos  map y collect son exactamente los mismos
+#the map and collect methods are exactly the same
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 squares = []
 numbers.each { |number| squares << number **2 }
 p squares
 
-#usando map
-#el metodo map lo que haces es asignar los valores a una matriz sin tener que crearla con anterioridad y ademas sin tener que usar un push o (<<) solo basta con escribir dentro del ciclo lo que queremos que se guarde en la matriz
+#using map
+#the map method what you do is assign the values to an array without having to create it beforehand and also without having to use a push or (<<), you just have to write within the loop what we want to be saved in the array
 arrar = numbers.map { |number| number ** 2 }
 p arrar
 puts
 
-#tambien al igual que los otros metodos se puede usar do, end
+#also like the other methods you can use do, end
 temperature = [105, 32, 9, -34, 18]
 celcius = temperature.map do |number|
   minus = number - 32
@@ -144,13 +144,13 @@ celcius = temperature.map do |number|
 end
 p celcius
 puts
-#se puede realizar operaciones directas
+#direct operations can be performed
 
 results = [1, 2, 3].map { |e| e ** 2  }
 p results
 puts
 
-#ejercicio
+#Exercise
 def cubes(arr)
   arr.map { |number| number ** 3 }
 end
@@ -159,7 +159,7 @@ p cubes([3, 4, 5, 6, 7, 8])
 puts
 
 #====================================================iteration over Array with while or until loops
-#una forma de recorrer la matriz es unsando ciclos o bucles como while o until recorriendo la posicion del indice
+#one way to go through the array is using cycles or loops like while or until going through the index position
 animals = ["Lion", "Zebra", "Baboon", "Cheetah"]
 
 i = 0
@@ -170,7 +170,7 @@ while i < animals.length
 end
 puts
 
-#Usando until
+#using until
 i = 0
 until i > animals.length
 
@@ -180,7 +180,7 @@ end
 puts
 
 #======================================================The break keyword
-#se puede detener un ciclo con break
+#you can stop a cycle with break
 
 prizes = ["Pyrite", "Pyrite", "Pyrite", "Gold", "Pyrite", "Pyrite"]
 
@@ -197,7 +197,7 @@ while i < prizes.length
 end
 puts
 
-#Se puede terminar todos los ciclos con break
+#All cycles can be terminated with break
 prizes.each do |num|
   if num == "Gold"
     puts "Yay! Found gold!"
@@ -209,7 +209,7 @@ end
 puts
 
 #======================================================the next keyword
-#el emtodo next se utiliza siempre que se requiere saltar al siguiente elemento de la matriz
+#the next method is used whenever it is required to jump to the next element of the array
 numbers = [1, 2, 3, "hello", 5, 6, 7, 8, []]
 numbers.each do |num|
   unless num.is_a?(Integer)
@@ -221,36 +221,37 @@ end
 puts
 
 #====================================================The reverse method on an Array
-#el metodo reverse que se miro anteriormente tambien funciona en array y lo que hace es invertir los valores del Array
+#the reverse method that was looked at previously also works in array and what it does is invert the values of the Array
 
 numbers = [1, 2, 3, 4, 5]
 
 p numbers.reverse
 
 p numbers
-#en este caso el metodo solo funciona para mostrar si se quiere cambiar la matriz original se debe aumentar el signo de exclamacion al final del metodo
+
+#in this case the method only works to show if you want to change the original matrix you must increase the exclamation mark at the end of the method
 numbers.reverse!
 p numbers
 puts
 
 #====================================================the sort method on an Array
-#Este metodo sirve para ordenar una matriz, si la matriz es de numeros esta se ordenara de forma ascendente, y si es string se ordenara alfabeticamente
+#This method is used to order a matrix, if the matrix is of numbers it will be ordered in ascending order, and if it is a string it will be ordered alphabetically
 
 numbers = [5, 6, 13, -2, 8, -1]
 words = ["Hello", "World", "apple", "zebra", "lemon"]
 
 p numbers.sort
-p words.sort #se debe tener en cuenta que al ordenar un string se ordena alfabeticamente y empezando por mayusculas
+p words.sort #It should be taken into account that when ordering a string, it is ordered alphabetically and starting with capital letters
 p numbers
 puts
 
-#al igual que el metodo anterior si quremos modificar la matriz original se utiliza el signo de admiracion
+#Like the previous method, if we want to modify the original array, the exclamation mark is used
 numbers.sort!
 p numbers
 puts
 
 #======================================================The concat method on an array
-#concatenar dos matrices es facil solo con el signo + o la palabra concat
+#concatenating two matrices is easy just with the + sign or the word concat
 
 p [1, 2, 3] + [4, 5]
 nums = [1, 2, 3].concat([4, 5, 6])
@@ -271,14 +272,14 @@ p custom_concat(a, b)
 puts
 
 #========================================================the max and min methods on an Array
-#estos metodos sirven para mostrar el valor maximo y el minimo de una matriz
+#These methods are used to show the maximum and minimum value of an array
 
 c = [1, 2, 3, 4, 5, 6, 89, 1, 2, 6, 23]
 
 p c.max
 p c.min
 
-#Tambien funcionan para una matriz de String
+#They also work for an array of String
 d = ["apple", "kiwi", "banana", "watermelon"]
 
 p d.max
@@ -288,7 +289,7 @@ puts
 #######################
 
 def custom_max(arr)
-  arr.sort[-1]#ordena el array y retorna el ultimo valor de la matriz
+  arr.sort[-1]#sort the array and return the last value of the array
 end
 
 def custom_min(arr)
@@ -299,7 +300,7 @@ p custom_max([1, 6, 8, 5, 3, 1])
 p custom_min([1, 6, 8, 5, 3, 1])
 puts
 
-#otra forma de obtener el mayor
+#another way to get the biggest
 
 def custom_max1(arr)
   return nil if arr.empty?
@@ -322,23 +323,23 @@ end
 p custom_max1([1, 6, 8, 5, 3, 1])
 puts
 #=====================================================The include? method on an Array
-#el metodo include en este caso para matrices busca si el valor que inresamos se encuentra en alguna m+posicion de la matriz
+#the include method in this case for matrices looks for if the value we input is in some m + position of the array
 
 fruits = ["Apple", "Banana", "Kiwi", "melon"]
 
 p fruits.include?("Apple")
 
 #=========================================================The index and find index methods on an Array
-#los dos metodos son exactamente los mismos los cuales devuelven el indice o posicion del elemento buscado
+#the two methods are exactly the same which return the index or position of the searched element
 
 colors = ["Red", "Green", "Blue", "Red"]
 
 p colors.find_index("Green")
-p colors.index("Red") #se debe tener en cuenta que si el valor esta repetido nos retornara la primera posicion donde lo encuentre
+p colors.index("Red") #It must be taken into account that if the value is repeated, it will return the first position where it is found
 puts
 
 #=====================================================The select method
-#este metodo selecciona los valores segun un creterio o una condicion
+#this method selects the values according to a criterion or a condition
 grades = [80, 95, 13, 76, 28, 39]
 
 matches = grades.select do |number|
@@ -350,7 +351,7 @@ p matches
 puts
 
 #======================================================the reject method
-#este metodo devuelve una nueva matriz que rechaza todos los elementos de un bloque que se evaluara, que es lo contrario a select
+#this method returns a new array that rejects all elements of a block to be evaluated, which is the opposite of select
 
 animals = ["cheetah", "cat", "Lion", "elephant", "dog", "cow"]
 
@@ -362,19 +363,19 @@ p reject_results
 puts
 
 #====================================================Unpack a multidimensional Array
-#en este caso se tiene un amatriz multidimensional que cada posicion o indice es una matriz nueva
+#in this case we have a multidimensional array that each position or index is a new array
 user = [["Bob", 25, "Male"], ["Susan", 48, "Female"], ["Luis", 23, "Male"]]
 
-#se puede mostrar el contenido completo de la posicion que es ua matriz o cada elemento poniendo otros corchetes seguidis de los anteriores indicando el indice de la segunda matriz
+#You can show the complete content of the position that is an array or each element by putting other brackets followed by the previous ones indicating the index of the second matrix
 p user[1][2]
 
-#se puede asignar cada contenido de la matriz a una variable
+#each content of the array can be assigned to a variable
 bob, susan, larry = user
 p bob
 puts
 
 #===============================================The partition method
-#este metodo separa la matriz original en dos, dependiendo de la condicion, poniendo la matriz requerida a la izquierda y a la derecha lo restante de la matriz
+#this method separates the original array in two, depending on the condition, putting the required array on the left and the rest of the array on the right
 
 foods = ["Steak", "Vegatables", "Steak Bueger", "Kale", "Tofu"]
 
