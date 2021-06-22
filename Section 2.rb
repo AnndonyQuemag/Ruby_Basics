@@ -1,121 +1,175 @@
 #========================================================Metodo Puts
 puts "First test of Ruby"
 puts "Hello"
+puts
 
-puts "yo compre 5 dolares en la tienda"
+puts "I paid 5 dollars at the store"
+puts
 
 puts 5
+puts
+
 puts 3.14159
+puts
 
 puts 4 + 3
+puts
 
-puts "4" + "3" #el signo + Une Cadena tambien
+puts "4" + "3" #the sign + join chain too
 puts
-puts
+
 #=======================================================print methods
-
 print "Hello print"
 print " World"
-#imprime sin saltos de linea
+#print without line breaks
 puts
+
 #=======================================================p methods
-
-
-#la letra p muestra lo mismo que puts aumentando las comillas como para mencionar una frase
+#the letter p shows the same as puts by increasing the quotation marks to mention a phrase
 p "Test of p"
-puts "Hola, prueba de puts
-salto linea"
+puts
 
-p "Hola, prueba de p
-salto linea"
+puts "Hello, puts test
+line jump"
 puts
+
+p "Hello, p test
+line jump"
 puts
+
 #=======================================Basic Arithmetic
-
 p 1 + 4
+puts
+
 p 10 - 6
+puts
+
 p 3 * 4
+puts
+
 p 2 / 2
+puts
+
 p 2 % 2
+puts
+
 p 12 / 5
-p 12.0 / 5 #con punto se realiza división decimal
+puts
+
+p 12.0 / 5 #with point decimal division is performed
+puts
 
 p 2 * 2 * 2 * 2
-p 2 ** 4 #para realizar potencia se utiliza doble (**)
 puts
-#==========================================coments
+
+p 2 ** 4 #double (**) is used to perform power
+puts
+
+#==========================================comments
 
 =begin
-  puts "Prueba de comentarios"
-  puts "Prueba 2 comentarios"
+  puts "test comments"
+  puts "test comments 2"
 =end
 
 #========================================Variables
 name = "Anndony"
 last_name = "Quemag"
 band = true
-age = 24 +1
+age = 24 + 1
+
 puts name
-puts name + " " +last_name # cadenas unidas
+puts name + " " + last_name #strings attached
 puts band
 puts age
+puts
+
 var = 30
 p var
-var = "Cambio a string" # se cambio el valor de numerico a string
+puts
+
+var = "Changed to string" #the value was changed from numeric to string
 puts var
 puts
 
 #=====================================Parallel Variables assignment
-a=10
-b=20
-c=30
-puts a,b,c
-a,b,c=40,50,60
-puts "En una linea"
-puts a,b,c
-puts "Asignando en una linea"
-a,b,c=b,c,a
-puts a,b,c
-print "a: #{a}"," b: #{b}", " c: #{c}" # imprimir cadenas con numeros
+a = 10
+b = 20
+c = 30
+
+puts a, b, c
+puts
+
+a, b, c = 40, 50, 60
+
+puts "In a line"
+puts a, b, c
+puts
+
+puts "Assigning on a line"
+
+a, b, c = b, c, a
+puts a, b, c
+puts
+
+print "a: #{a}", " b: #{b}", " c: #{c}" # print strings with numbers
 puts
 
 #====================================Constants
 PI = 3.14159
+
 NAME = "Anndony"
 
-asd=90
-puts "My name is #{asd}"
+num = 90
+
+puts "My name is #{num}"
 puts
+
 #=====================================Object methods
-#Cuenta cantidad de caracteres (.length)
+#Counts number of characters (.length)
 p "Hello World".length
+
 cont = "Hello World"
 p cont.length
-#Cambia todas las letras a matusculas (.upcase)
+puts
+
+#Change all letters to uppercase (.upcase)
 p "Hello World".upcase
+
 mayu = "hello world"
 p mayu.upcase
-#Cambia todas las letras a minusculas (.downcase)
+puts
+
+#Change all letters to lowercase (.downcase)
 p "HELLO WORLD".downcase
+
 minu = "HELLO WORLD"
 p minu.downcase
-#Pone el sigiente (.next)
+puts
+
+#Put the following (.next)
 puts 10.next
+puts
 
-#Inspeccionar similar a p (.inspect)
-
+#Inspect similar to p (.inspect)
 puts "Hello World".inspect
 puts
+
 #=====================================string Interpolation
-#convertir a string
+#convert to string
 p 5.to_s
 
 age = 23
 
 p "I am " + age.to_s + " years old"
 p "I am #{age} years old"
-p "The result od adding 1 + 1 is #{1+1}"
-p "My name is #{name+" "+last_name}, I am "+ age.to_s + " years old." #imprimir cademas con numeros combirtiendo la edad a string
+puts
+
+p "The result od adding 1 + 1 is #{1 + 1}"
+puts
+
+p "My name is #{name + " " + last_name}, I am " + age.to_s + " years old." #print strings with numbers converting age to string
+puts
 
 #=========================================in terminal
 =begin
