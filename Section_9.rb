@@ -66,9 +66,9 @@ shirts = ["striped", "plain white", "plaid", "band"]
 ties = ["polka dot", "solid color", "boring"]
 
 shirts.each do |shirt|
- ties.each do |tie|
-   puts "OPTION: A #{shirt} shirt and a #{tie} tie"
- end
+  ties.each do |tie|
+    puts "OPTION: A #{shirt} shirt and a #{tie} tie"
+  end
 end
 puts
 
@@ -114,8 +114,8 @@ arr = [-1, 2, 1, 2, 5, 7, 3]
 def print_if(array)
   array.each_with_index do |number, index|
     if index > number
-        puts "We have a match, the index is #{index} and the number is #{number}"
-        puts "The result of multiplying the is #{index * number}"
+      puts "We have a match, the index is #{index} and the number is #{number}"
+      puts "The result of multiplying the is #{index * number}"
     end
   end
 end
@@ -164,7 +164,6 @@ animals = ["Lion", "Zebra", "Baboon", "Cheetah"]
 
 i = 0
 while i < animals.length
-
   puts animals[i]
   i += 1
 end
@@ -173,7 +172,6 @@ puts
 #using until
 i = 0
 until i > animals.length
-
   puts animals[i]
   i += 1
 end
