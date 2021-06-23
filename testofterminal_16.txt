@@ -1,0 +1,2 @@
+This is a test of read from a text file with Ruby
+this is the second line of the document
